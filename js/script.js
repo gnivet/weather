@@ -44,7 +44,7 @@ function fetchWeather(location) {
         .then(response => response.json())
         .then(data => {
             locationElement.textContent = data.name;
-            temperatureElement.textContent = `${Math.round(data.main.temp)}°C`;
+            temperatureElement.textContent = `${Math.round(data.main.temp)} °C`;
             descriptionElement.textContent = data.weather[0].description;
         })
         .catch(error => {
@@ -59,9 +59,9 @@ function requestApi(){
         .then(response => response.json())
         .then(data => {
             cityElement.textContent = data.name;           
-            longitudeElement.textContent = `${Math.round(data.coord.lon)}Longitude`;
-            latitudeElement.textContent = `${Math.round(data.coord.lat)}Latitude`;
-            humidityElement.textContent = `${Math.round(data.coord.humidity)}Humidity`; 
+            longitudeElement.textContent = `${Math.round(data.coord.lon)} Longitude`;
+            latitudeElement.textContent = `${Math.round(data.coord.lat)} Latitude`;
+            humidityElement.textContent = data.coord.humidity; 
         })
         .catch(error => {
             console.error('Error fetching weather data:', error);
