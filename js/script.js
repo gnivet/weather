@@ -10,18 +10,7 @@ const temperatureElement = document.getElementById('temperature');
 const descriptionElement = document.getElementById('description');
 const latitudeElement = document.getElementById('latitude');
 const longitudeElement = document.getElementById('longitude');
-const humidityElement = document.getElementById('humidity');
 const cityElement = document.getElementById('city');
-/*
-const wrapper = document.querySelector(".wrapper"),
-inputPart = document.querySelector(".input-part"),
-  infoTxt = inputPart.querySelector(".info-txt"),
-  inputField = inputPart.querySelector("input"),
-  locationBtn = inputPart.querySelector("button"),
-  weatherPart = wrapper.querySelector(".weather-part"),
-  wIcon = weatherPart.querySelector("img"),
-  arrowBack = wrapper.querySelector("header i");
- */
 
 
 searchButton.addEventListener('click', () => {
@@ -59,31 +48,12 @@ function requestApi(){
         .then(response => response.json())
         .then(data => {
             cityElement.textContent = data.name;           
-            longitudeElement.textContent = `${Math.round(data.coord.lon)} Longitude`;
-            latitudeElement.textContent = `${Math.round(data.coord.lat)} Latitude`;
-            humidityElement.textContent = data.coord.humidity; 
+            longitudeElement.textContent = `${(data.coord.lon)} Longitude`;
+            latitudeElement.textContent = `${(data.coord.lat)} Latitude`;            
         })
         .catch(error => {
             console.error('Error fetching weather data:', error);
         });
 }; 
-/*
-function onError(error) {
-    // if any error occur while getting user location then we'll show it in infoText
-    infoTxt.innerText = error.message;
-    infoTxt.classList.add("error");
-  }
 
-function fetchData() {
-    infoTxt.innerText = "Getting weather details...";
-    infoTxt.classList.add("pending");
-    // getting api response and returning it with parsing into js obj and in another
-    // then function calling weatherDetails function with passing api result as an argument
-    fetch(api)
-      .then((res) => res.json())
-      .then((result) => weatherDetails(result))
-      .catch(() => {
-        infoTxt.innerText = "Something went wrong";
-        infoTxt.classList.replace("pending", "error");
-      });
-  }*/
+
