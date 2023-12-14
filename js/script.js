@@ -48,8 +48,8 @@ function requestApi(){
         .then(response => response.json())
         .then(data => {
             cityElement.textContent = data.name;           
-            longitudeElement.textContent = `${(data.coord.lon)} Longitude`;
-            latitudeElement.textContent = `${(data.coord.lat)} Latitude`;            
+            longitudeElement.textContent = `Longitude: ${(data.coord.lon)}`;
+            latitudeElement.textContent = `Latitude: ${(data.coord.lat)}`;            
         })
         .catch(error => {
             console.error('Error fetching weather data:', error);
