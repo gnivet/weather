@@ -4,25 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
         <h1>Weather App</h1>
+        
         <input type="text" id="locationInput" placeholder="Enter a city">
-        <button id="searchButton">Search</button>       
+        <button id="searchButton">Search</button>     
         <button id="apiButton">Api</button>
-        <div class="weather-info">
-            <h2 id="location"></h2>
+        
+        <div class="weather-info"> 
+        <div>    
+          <h2 id="location"></h2>
             <p id="temperature"></p>
-            <p id="description"></p>            
-        </div>
+            <p id="description"></p>             
+        </div> 
         <div class="api-info">
-            <p id="city"></p>            
+            <h2 id="city"></h2>  
+            <h2 id="description"></h2>
+            <p id="feels_like"></p>
+            <p id="temperature"></p>  
             <p id="latitude"></p>
             <p id="longitude"></p>
-        </div>
+            <p id="pressure"></p>
+            <p id="humidity"></p>
+            <p id="temp_min"></p>
+            <p id="temp_max"></p>
+            <p id ="wind"></p>
+        </div>     
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/meteo.js"></script>
 </body>
 </html>
