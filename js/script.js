@@ -54,14 +54,14 @@ function fetchWeather(location) {
 
 
 function requestApi(){
-    const apiUrl2 = 'https://api.openweathermap.org/geo/1.0/direct?q=cognac,&appid=5f1b9d82972923335a93993455857f3a';    
+    const apiUrl2 = 'https://api.openweathermap.org/data/2.5/weather?lat=45.7&lon=-0.3333&units=5&appid=5f1b9d82972923335a93993455857f3a';    
     fetch(apiUrl2)
         .then(response => response.json())
         .then(data => {
             cityElement.textContent = data.name;           
-            longitudeElement.textContent = `${Math.round(data.coor.lon)}Longitude`;
-            latitudeElement.textContent = `${Math.round(data.coor.lat)}Latitude`;
-            humidityElement.textContent = `${Math.round(data.coor.humidity)}Humidity`; 
+            longitudeElement.textContent = `${Math.round(data.coord.lon)}Longitude`;
+            latitudeElement.textContent = `${Math.round(data.coord.lat)}Latitude`;
+            humidityElement.textContent = `${Math.round(data.coord.humidity)}Humidity`; 
         })
         .catch(error => {
             console.error('Error fetching weather data:', error);
