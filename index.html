@@ -8,32 +8,30 @@
 </head>
 <body>
     <div class="container">
-        <h1>Weather App</h1>
-        
+        <h1>Weather App</h1>        
         <input type="text" id="locationInput" placeholder="Enter a city">
-        <button id="searchButton">Search</button>     
-        <button id="apiButton">Api</button>
-        
+        <button id="searchButton">Search</button> 
+        <button id="apiButton">Api</button>          
         <div class="weather-info"> 
         <div>    
-          <h2 id="location"></h2>
-            <p id="temperature"></p>
-            <p id="description"></p>             
+          <h1 id="location"></h1>
+          <p id="latitude"></p>
+          <p id="longitude"></p>
+          <h3 id="description"></h3> 
+          <h3 id="temperature"></h3>
         </div> 
         <div class="api-info">
-            <h2 id="city"></h2>  
-            <h2 id="description"></h2>
-            <p id="feels_like"></p>
-            <p id="temperature"></p>  
-            <p id="latitude"></p>
-            <p id="longitude"></p>
+            <h3 id="city"></h3>            
+            <h3 id="feels_like"></h3>
+            <p id="temperature"></p> 
             <p id="pressure"></p>
             <p id="humidity"></p>
             <p id="temp_min"></p>
             <p id="temp_max"></p>
-            <p id ="wind"></p>
+            <h3 id ="wind"></h3>
         </div>     
     </div>
     <script src="js/meteo.js"></script>
+    <script src="data/conf.json"></script>
 </body>
 </html>
