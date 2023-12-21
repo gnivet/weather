@@ -1,7 +1,0 @@
-{  
-   "config":
-  {
-    "apiKey": "5f1b9d82972923335a93993455857f3a",
-    "apiUrl": "https://api.openweathermap.org/geo/1.0/direct?q=cognac,&appid=5f1b9d82972923335a93993455857f3a"
-  }
-}
