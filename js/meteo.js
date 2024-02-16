@@ -52,7 +52,8 @@ function fetchWeather(location) {
 
 
 function requestApi(){
-    const apiUrl2 = 'https://api.openweathermap.org/data/2.5/weather?lat=45.7&lon=-0.3333&units=5&appid=5f1b9d82972923335a93993455857f3a';    
+    const apiUrl2 = 'https://api.openweathermap.org/data/2.5/weather?lat=45.7&lon=-0.3333&units=5&appid=5f1b9d82972923335a93993455857f3a'; 
+      
        fetch(apiUrl2)
         .then(response => response.json())
         .then(data2 => {
