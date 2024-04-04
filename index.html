@@ -10,10 +10,16 @@
 <body>
     <div class="container">
         <h1>Weather App</h1>
-        
-        <input type="text" id="locationInput" placeholder="Enter a city">
-        <input type="text" id="nom" name="nom">
-        <input type="checkbox" id="accepter" name="accepter">
+         <input type="text" id="locationInput" placeholder="Enter a city">
+                <h5>          
+            <!-- For temperature in Fahrenheit use units=imperial
+            For temperature in Celsius use units=metric -->
+            <select type="text" id="unitsInput">
+                <option value="imperial">°F</option>
+                <option value="metric" selected>°C</option>          
+              </select>
+        </h5>
+        <!-- <input type="text" id="unitsInput" placeholder="Enter metric or imperial">         -->
         <button id="searchButton">Search</button>     
         <button id="apiButton">Api</button>
         

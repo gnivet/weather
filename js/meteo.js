@@ -18,29 +18,34 @@ const temp_minElement = document.getElementById('temp_min');
 const temp_maxElement = document.getElementById('temp_max');
 const windElement = document.getElementById('wind');
 const feels_likeElement = document.getElementById('feels_like');
+const unitsInput = document.getElementById('unitsInput');
+let units = unitsInput.value;
 
 searchButton.addEventListener('click', () => {
     let location = locationInput.value;
-    if (location) {
-        fetchWeather(location);
+    let units = unitsInput.value;
+    if (location && units) {
+        fetchWeather(location , units);
     }  
     
 });
 
+
+
 apiButton.addEventListener('click', () => {
     let location = 'Cognac';      
         
-    if (location)
+    if (location && units) 
     {
-        fetchWeather(location);
-        locationInput.textContent = `${(location)}`;
+        fetchWeather(location , units);
+      
     }
       
 });
 
-function fetchWeather(location) {
-   let url = `${apiUrl}?q=${location}&appid=${apiKey}&units=metric`;
-
+function fetchWeather(location, units) {
+//    let url = `${apiUrl}?q=${location}&appid=${apiKey}&units=metric`;
+let url = `${apiUrl}?q=${location}&appid=${apiKey}&units=${units}`;
     fetch(url)
         .then(response => response.json())
         .then(data => {
