@@ -12,6 +12,7 @@ const descriptionElement = document.getElementById('description');
 const latitudeElement = document.getElementById('latitude');
 const longitudeElement = document.getElementById('longitude');
 const cityElement = document.getElementById('city');
+const countryElement = document.getElementById('country');
 const pressureElement = document.getElementById('pressure');
 const humidityElement = document.getElementById('humidity');
 const temp_minElement = document.getElementById('temp_min');
@@ -24,6 +25,7 @@ let units = unitsInput.value;
 searchButton.addEventListener('click', () => {
     let location = locationInput.value;
     let units = unitsInput.value;
+   
     if (location && units) {
         fetchWeather(location , units);
     }  
@@ -34,7 +36,7 @@ searchButton.addEventListener('click', () => {
 
 apiButton.addEventListener('click', () => {
     let location = 'Cognac';      
-        
+    
     if (location && units) 
     {
         fetchWeather(location , units);
@@ -50,17 +52,19 @@ let url = `${apiUrl}?q=${location}&appid=${apiKey}&units=${units}`;
         .then(response => response.json())
         .then(data => {
             locationElement.textContent = data.name;
-            temperatureElement.textContent = `${Math.round(data.main.temp)} °C`;
+            temperatureElement.textContent = `${Math.round(data.main.temp)} `;
+           
             descriptionElement.textContent = data.weather[0].description;
             feels_likeElement.textContent = `Feels like:${Math.round(data.main.feels_like)}`;         
-            temperatureElement.textContent = `Temp :${Math.round(data.main.temp)} °C`;         
+            temperatureElement.textContent = `Temp :${Math.round(data.main.temp)} `;         
             longitudeElement.textContent = `Longitude: ${(data.coord.lon)}`;
             latitudeElement.textContent = `Latitude: ${(data.coord.lat)}`;   
             pressureElement.textContent = `Pressure: ${(data.main.pressure)}`;  
             humidityElement.textContent = `Humidity: ${(data.main.humidity)}`;  
-            temp_minElement.textContent = `Temp min: ${(data.main.temp_min)} °C`; 
-            temp_maxElement.textContent = `Temp max: ${(data.main.temp_max)} °C`;  
+            temp_minElement.textContent = `Temp min: ${(data.main.temp_min)} `; 
+            temp_maxElement.textContent = `Temp max: ${(data.main.temp_max)} `;  
             windElement.textContent = `Wind: ${(data.wind.speed)} Milles/heure`;
+            countryElement.textContent = `Country: ${(data.sys.country)} `;
                                   
         })
         .catch(error => {
