@@ -12,19 +12,17 @@
         <h1>Weather App</h1>
         
         <input type="text" id="locationInput" placeholder="Enter a city">
+        <input type="text" id="nom" name="nom">
+        <input type="checkbox" id="accepter" name="accepter">
         <button id="searchButton">Search</button>     
         <button id="apiButton">Api</button>
         
         <div class="weather-info"> 
-        <div>    
+       <div>    
           <h2 id="location"></h2>
             <p id="temperature"></p>
-            <p id="description"></p>             
-        </div> 
-        <div class="api-info">
-            <h2 id="city"></h2>  
-            <h2 id="description"></h2>
-            <p id="feels_like"></p>
+            <p id="description"></p>  
+			<p id="feels_like"></p>
             <p id="temperature"></p>  
             <p id="latitude"></p>
             <p id="longitude"></p>
@@ -32,8 +30,8 @@
             <p id="humidity"></p>
             <p id="temp_min"></p>
             <p id="temp_max"></p>
-            <p id ="wind"></p>
-        </div>     
+            <p id ="wind"></p>           
+        </div> 
     </div>
     <script src="js/meteo.js"></script>
 </body>
