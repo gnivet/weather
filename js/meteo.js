@@ -6,7 +6,6 @@
 //https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 //https://api.openweathermap.org/data/2.5/weather?q=paris&appid=5f1b9d82972923335a93993455857f3a
 
-//https://maps.googleapis.com/maps/api/js?key=AIzaSyCKfAjDmj-DgmTBOK_grsB8THk2Ubrd2yE&callback=console.debug&libraries=maps,marker&v=beta
 const apiKey = "5f1b9d82972923335a93993455857f3a";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
 
