@@ -11,33 +11,46 @@
     <div class="container">
         <h1>Weather App</h1>
          <input type="text" id="locationInput" placeholder="Enter a city">
-                <h5>          
+        <h5>          
             <!-- For temperature in Fahrenheit use units=imperial
             For temperature in Celsius use units=metric -->
-            <select type="text" id="unitsInput">
+            <select type="text" id="unitsInputList">
+                <option value="standard">K</option>
                 <option value="imperial">°F</option>
                 <option value="metric" selected>°C</option>          
               </select>
         </h5>
+        <h5>          
+            <!-- For different languages -->
+            <select type="text" id="languesInputList">
+                <option value="fr">french</option>
+                <option value="sp">spanish</option>
+                <option value="de">deutch</option>
+                <option value="it">italian</option>
+                <option value="zh_cn">chinese</option>
+                <option value="ja">japanese</option>
+                <option value="en" selected>english</option>          
+              </select>
+        </h5>
         <!-- <input type="text" id="unitsInput" placeholder="Enter metric or imperial"> -->
         <button id="searchButton">Search</button>     
-        <button id="apiButton">Api</button>
-        
+        <button id="apiButton">Cognac</button>        
         <div class="weather-info"> 
        <div>    
-          <h2 id="location"></h2>
-            <p id="temperature"></p> 
-            <p id="description"></p>  
+          <h2 id="location"></h2>            
+            <img id="weather-icon" src="" alt="Weather Icon"> 
+            <h1><p id="description"></p></h1>  
 			<p id="feels_like"></p>
-            <p id="temperature"></p>  
+            <p id="temperature" src=""></p>  
             <p id="latitude"></p>
             <p id="longitude"></p>
             <p id="pressure"></p>
             <p id="humidity"></p>
             <p id="temp_min"></p>
-            <p id="temp_max"></p>
-            <p id ="wind"></p>  
-            <p id ="country"></p>         
+            <p id="temp_max"></p>           
+            <p id ="wind"></p>            
+            <p id ="country"></p>  
+            <p id="map"></p>       
         </div> 
     </div>
     <script src="js/meteo.js"></script>
